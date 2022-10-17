@@ -1,4 +1,6 @@
-public class Chaine implements Sommable<Chaine>{
+import java.util.Set;
+
+public class Chaine<T extends Sommable<T>> implements Arbre<T> {
     private final Chaine valeur;
 
     public Chaine( final Chaine valeur) {
@@ -6,8 +8,19 @@ public class Chaine implements Sommable<Chaine>{
     }
 
 
+
     @Override
-    public Chaine sommer(Chaine somme) {
-        return somme;
+    public int taille() {
+        return 0;
+    }
+
+    @Override
+    public boolean contient(T val) {
+        return false;
+    }
+
+    @Override
+    public Set<T> valeurs() {
+        return null;
     }
 }

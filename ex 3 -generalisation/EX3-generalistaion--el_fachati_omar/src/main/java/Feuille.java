@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-public class Feuille<T> implements Arbre<T> {
+public class Feuille<T extends Sommable<T>> implements Arbre<T> {
 
     private final T valeur;
 
@@ -24,10 +24,5 @@ public class Feuille<T> implements Arbre<T> {
     @Override
     public Set<T> valeurs() {
         return Set.of(valeur);
-    }
-
-    @Override
-    public T sommer(T somme) {
-        return valeur;
     }
 }
