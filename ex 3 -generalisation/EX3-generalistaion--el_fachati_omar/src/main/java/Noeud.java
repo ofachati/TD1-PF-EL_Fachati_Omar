@@ -37,4 +37,10 @@ public class Noeud<T> implements Arbre<T> {
         }
         return (Set<T>) rtr;
     }
+
+    @Override
+    public T sommer(T somme) {
+
+        return somme;
+    }
 }
